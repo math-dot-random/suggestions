@@ -7,10 +7,6 @@ for(var i = 1; i <=400; i++){
 }
 
 
-
-
-
-
 // console.log(stock)
 
 

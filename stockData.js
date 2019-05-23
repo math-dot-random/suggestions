@@ -1,20 +1,19 @@
 const faker = require('faker');
 
-var stock = [];
+const stock = [];
 
-for(var i = 1; i <=400; i++){
-  stock.push({stockname:faker.company.companyName(), buyPercentage: faker.finance.amount(), currentPrice: faker.finance.amount(), changePercent: faker.finance.amount()})
+for (let i = 1; i <= 400; i++) {
+  stock.push({
+    stockname: faker.company.companyName(),
+    buyPercentage: faker.finance.amount(),
+    currentPrice: faker.finance.amount(),
+    changePercent: faker.finance.amount(),
+  });
 }
 
 
 
-
-
-
 // console.log(stock)
-
-
-
 
 // var generator = function (){
 //   const data = {};
@@ -36,4 +35,4 @@ for(var i = 1; i <=400; i++){
 //   max = Math.floor(max);
 //   return Math.floor(Math.random() * (max - min + 1)) + min;
 // }
-module.exports ={stock}
+module.exports = { stock };

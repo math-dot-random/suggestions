@@ -2,8 +2,7 @@ const faker = require('faker');
 
 const stock = [];
 
-
-for (let i = 1; i <= 400; i + 1) {
+for (let i = 1; i <= 400; i++) {
   stock.push({
     stockname: faker.company.companyName(),
     buyPercentage: faker.finance.amount(),
@@ -11,6 +10,7 @@ for (let i = 1; i <= 400; i + 1) {
     changePercent: faker.finance.amount(),
   });
 }
+
 
 
 // console.log(stock)

@@ -10,7 +10,8 @@ app.use(bodyParser.json() );
 app.use(express.static(path.join(__dirname, '../client/public')));
 
 
-app.listen(3050, function() {
-  console.log('listening on port 3050!');
-});
-module.exports = {express}/
+app.get('/api/tesla/suggestions', (req, res) => {
+  database.getAll(res);
+})
+
+module.exports = {express}

@@ -6,6 +6,7 @@ var connection = mysql.createConnection(mysqlConfig);
 // var getAllUsers = function(res,cb) {
 //   connection.query(`Select * FROM users` , cb)
 // };
+connection.connect();
 
 const handleResponse = function(err, data, res) {
   if (err) {

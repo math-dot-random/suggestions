@@ -1,44 +1,51 @@
-var mysql = require('mysql');
-var mysqlConfig = require('./dbconfig');
+const mysql = require('mysql');
+const mysqlConfig = require('./dbconfig.js');
 
-var connection = mysql.createConnection(mysqlConfig);
+const connection = mysql.createConnection(mysqlConfig);
 
-// var getAllUsers = function(res,cb) {
-//   connection.query(`Select * FROM users` , cb)
-// };
 connection.connect();
 
-const handleResponse = function(err, data, res) {
-  if (err) {
-    res.status(500);
-    res.send(err);
-  } else {
-    res.status(200);
-    res.send(data);
-  }
-}
-
-
-// const getAll = function(res) {
-//   connection.query('SELECT * FROM users', (err, data) => {handleResponse(err, data, res)});
-// }
-
-const getAll = function(res) {
-  connection.query('SELECT * FROM stock_info', (err, data) => {handleResponse(err, data, res)});
-}
-
-// CORRECT
-// const getAll = function(callback) {
-//   connection.query('SELECT * FROM users', (err, data) => {
-//     if(err) {
+// const getAllStockInfo  = (callback) => {
+//   connection.query(`SELECT * FROM stock_info`, (err, data) => {
+//     if (err) {
 //       callback(err);
 //     } else {
-//       callback(null, data);
+      
+//       callback(null,data)
+//     }
+//   })
+// }
+// const getAllRelatedInfo = (callback) => {
+//   connection.query(`SELECT * FROM related_stocks`, (err, data) => {
+//     if (err) {
+//       callback(err);
+//     } else {
+//       callback(null,data)
 //     }
 //   })
 // }
 
+const getRelatedStocks = (stock_id, callback) => { 
+  connection.query(`select * from stock_info inner join related_stocks where stock_info.id = ${stock_id} AND related_stocks.stock_id = stock_info.id`, (err,data) => {
+    if (err) {
+      callback(err);
+    } else {
+      callback(null,data)
+    }
+  })
+}
 
+const getStockInfo = (callback) => {
+  connection.query(`select * from stock_info`, (err,data) => {
+    if (err) {
+      callback(err);
+    } else {
+      callback(null,data)
+    }
+  })
+}
 
-module.exports ={getAll: getAll}
+module.exports = {
+  getRelatedStocks, getStockInfo
+}
 

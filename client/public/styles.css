@@ -30,6 +30,17 @@ body {
   background-color: #171718;
   border: 1px solid #000 ;
   text-decoration: none;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  height: 184px;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-right: 12px;
+  overflow: hidden;
+  padding: 22px 23px;
+  width: 160.5px;
   }
   #stock2{
   width: 160.5px;
@@ -38,6 +49,17 @@ body {
   background-color: #171718;
   border: 1px solid #000 ;
   text-decoration: none;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  height: 184px;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-right: 12px;
+  overflow: hidden;
+  padding: 22px 23px;
+  width: 160.5px;
   }
   #stock3{
   width: 160.5px;
@@ -46,6 +68,17 @@ body {
   background-color: #171718;
   border: 1px solid #000 ;
   text-decoration: none;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  height: 184px;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-right: 12px;
+  overflow: hidden;
+  padding: 22px 23px;
+  width: 160.5px;
   }
   #stock4{
   width: 160.5px;
@@ -54,6 +87,17 @@ body {
   background-color: #171718;
   border: 1px solid #000 ;
   text-decoration: none;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  height: 184px;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-right: 12px;
+  overflow: hidden;
+  padding: 22px 23px;
+  width: 160.5px;
   }
   #upper1{
     color: white;

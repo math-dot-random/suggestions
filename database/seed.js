@@ -9,6 +9,7 @@ connection.query(`INSERT INTO stock_info(stock_name, analyst_buy, current_stock_
 }
 
 
+
 var relatedStock = function (){
   const data = {};
   let stockId = 1;

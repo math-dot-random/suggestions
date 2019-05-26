@@ -26,6 +26,3 @@ FOREIGN KEY (stock_id) REFERENCES stock_info(id)
 
 -- mysql -u root < schema.sql
 
-
-
-

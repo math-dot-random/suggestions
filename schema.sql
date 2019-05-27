@@ -10,7 +10,8 @@ id INT AUTO_INCREMENT PRIMARY KEY,
 stock_name VARCHAR(255),
 analyst_buy VARCHAR(255),
 current_stock_price VARCHAR(255),
-price_change VARCHAR(255)
+price_change VARCHAR(255),
+url_link VARCHAR(255)
 );
 
 CREATE TABLE related_stocks (

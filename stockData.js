@@ -8,6 +8,7 @@ for (let i = 1; i <= 400; i++) {
     buyPercentage: faker.finance.amount(),
     currentPrice: faker.finance.amount(),
     changePercent: faker.finance.amount(),
+    url: faker.internet.url(),
   });
 }
 

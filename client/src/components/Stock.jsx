@@ -7,6 +7,9 @@ background: #1b1b1d;
 padding: 20px;
 border: 1px solid #0e0d0d ;
 margin-right: 12px;
+text-decoration: none;
+
+
 
 `;
 
@@ -29,6 +32,8 @@ line-height: 19px;
 display: inline-block;
 margin-top: 5px;
 text-decoration: none;  
+margin: 0;
+max-height: 6ex;
 `;
 
 const StockPrice = styled.h1`
@@ -60,7 +65,7 @@ class Stock extends React.Component {
     var stockPrice = '$' + this.props.value.current_stock_price;
     return (
 
-      <StockBox>
+      <StockBox as="a" href = {this.props.value.url_link}>
         <StockName> {this.props.value.stock_name}</StockName>
         <StockBuyer >{buyersPercent}</StockBuyer>
         <StockPrice > {stockPrice}</StockPrice>

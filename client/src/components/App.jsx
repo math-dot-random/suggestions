@@ -68,7 +68,7 @@ class App extends React.Component{
     return(
       <AppWrap>
         <h1 id= "heading">People Also Bought</h1>
-       <RelatedStocksWrap as="a" href = "https://robinhood.com">{stockArr.map(stock => <Stock value={stock} handleClick = {this.handleClick} key={stock.id}/>)}</RelatedStocksWrap>
+       <RelatedStocksWrap >{stockArr.map(stock => <Stock value={stock} handleClick = {this.handleClick} key={stock.id}/>)}</RelatedStocksWrap>
       </AppWrap>
     )
   }

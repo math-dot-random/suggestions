@@ -4,7 +4,7 @@ const stockData = require('../stockData.js');
 const connection = mysql.createConnection(config);
 
 for(var i = 0; i<stockData.stock.length; i++){
-connection.query(`INSERT INTO stock_info(stock_name, analyst_buy, current_stock_price, price_change, url) VALUES ("${stockData.stock[i].stockname}",
+connection.query(`INSERT INTO stock_info(stock_name, analyst_buy, current_stock_price, price_change, url_link) VALUES ("${stockData.stock[i].stockname}",
  "${stockData.stock[i].buyPercentage}", "${stockData.stock[i].currentPrice}", "${stockData.stock[i].changePercent}", "${stockData.stock[i].url}")`);
 }
 

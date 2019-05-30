@@ -46,6 +46,7 @@ class App extends React.Component{
     })
 
     axios.get('/api' + window.location.pathname + '/2')
+    console.log(window.location.pathname.pathname)
     .then((stock) => {
       var relatedStockArr = this.state.relatedStocks;
       var relatedStockData = [];

@@ -1,9 +1,7 @@
 import React,{Component} from 'react';
 import styled from 'styled-components';
-import download from '../../../download.png'
 
-
-const StockBox = styled.div`
+const StockBox = styled.a`
 background: #1b1b1d;
 padding: 20px;
 border: 1px solid #0e0d0d ;
@@ -55,15 +53,14 @@ line-height: 19px;
 class Stock extends React.Component {
 
   render () {
-    
-    // var strArr = this.props.value.stock_name.split(" ");
+
     var buyersPercent = (this.props.value.analyst_buy/100).toFixed(2) + '%';
     var changePercent = (this.props.value.price_change/100).toFixed(2) + '%';
     var stockPrice = '$' + this.props.value.current_stock_price;
+    
     return (
-
-      <StockBox as="a" href = {this.props.value.url_link}>
-        <StockName> {nameStr}</StockName>
+      <StockBox as="a" href={this.props.value.url_link}>
+        <StockName> {this.props.value.stock_name}</StockName>
         <StockBuyer >{buyersPercent}</StockBuyer>
         <StockPrice > {stockPrice}</StockPrice>
         <StockChange >{changePercent}</StockChange>
@@ -71,6 +68,5 @@ class Stock extends React.Component {
     )
   }
 }
- 
- 
-  export default Stock;
+
+export default Stock;

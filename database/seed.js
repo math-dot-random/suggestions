@@ -8,8 +8,6 @@ connection.query(`INSERT INTO stock_info(stock_name, analyst_buy, current_stock_
  "${stockData.stock[i].buyPercentage}", "${stockData.stock[i].currentPrice}", "${stockData.stock[i].changePercent}", "${stockData.stock[i].url}")`);
 }
 
-
-
 var relatedStock = function (){
   const data = {};
   let stockId = 1;
@@ -21,8 +19,6 @@ var relatedStock = function (){
       stockId++
     }
     data.stockId = stockId
-// console.log('stockid', stockId)
-// console.log('otherstock', data.otherStockId)
     setRelatedId(data.stockId, data.otherStockId);
   }
 }
@@ -30,17 +26,6 @@ var relatedStock = function (){
 function setRelatedId(primaryId, secondaryId) {
   connection.query(`INSERT INTO related_stocks (stock_id, other_stock_id) VALUES ("${primaryId}", "${secondaryId}")`);
 }
-
-// function getRelatedIds(primaryId) {
-//   // return an array of all secondary Ids related to the primary Id.
-// }
-
-// function getStockPrice(primaryId) {
-//   //price
-
-
-// }
-
 
 relatedStock()
 
@@ -54,3 +39,12 @@ connection.end();
 
 module.exports = connection;
 
+// function getRelatedIds(primaryId) {
+//   // return an array of all secondary Ids related to the primary Id.
+// }
+
+// function getStockPrice(primaryId) {
+//   //price
+
+
+// }

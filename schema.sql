@@ -19,7 +19,7 @@ id INT AUTO_INCREMENT PRIMARY KEY,
 stock_id INT,
 other_stock_id INT,
 FOREIGN KEY (stock_id) REFERENCES stock_info(id)
--- FOREIGN KEY (other_stock_id) REFERENCES stock_info (id)
+FOREIGN KEY (other_stock_id) REFERENCES stock_info (id)
 )
 
 

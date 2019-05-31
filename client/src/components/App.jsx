@@ -42,7 +42,8 @@ class App extends React.Component{
       console.log(relatedStockIds)
    
       var relatedStockArray = [];
-      var relatedStockData = relatedStockIds.forEach(function(id) {
+      
+      relatedStockIds.forEach(function(id) {
         for(var i = 0 ; i < stock.data.data2.length; i++ ){
           // console.log(stock.data.data2)
           if(id === stock.data.data2[i].id){

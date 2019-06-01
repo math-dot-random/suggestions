@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest --watch",
     "react-dev": "webpack -d --watch",
+    "build": "webpack -p",
     "start": "nodemon server/index.js",
     "seed": "node ./database/seed.js"
   },
@@ -51,6 +52,7 @@
     "react-dom": "^16.8.6",
     "react-simple-tooltip": "^2.6.0",
     "react-tippy": "^1.2.3",
+    "sequelize": "^5.8.7",
     "styled-components": "^4.2.0",
     "supertest": "^4.0.2"
   }

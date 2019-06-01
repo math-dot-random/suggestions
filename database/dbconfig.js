@@ -1,6 +1,6 @@
 module.exports = {
-  host: 'localhost',
+  host: '172.17.0.2',
   user: 'root',
-  password: '',
+  password: 'pw',
   database: 'suggestions'
 };

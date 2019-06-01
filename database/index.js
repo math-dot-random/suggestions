@@ -1,9 +1,24 @@
 const mysql = require('mysql');
 const mysqlConfig = require('./dbconfig.js');
+// const Sequelize = require('sequelize')
 
 const connection = mysql.createConnection(mysqlConfig);
 
 connection.connect();
+
+// const db = new Sequelize('suggestions', 'root', 'pw' {
+//   host: '172.17.0.2',
+//   dialect: 'mysql'
+// })
+
+// db
+//   .authenticate()
+//   .then(() => {
+//     console.log('Successful');
+//   })
+//   .catch((err) => {
+//     console.error('Error,', err);
+//   })
 
 const getRelatedStocks = (stock_id, callback) => { 
 
@@ -31,4 +46,6 @@ const getStockInfo = (callback) => {
 module.exports = {
   getRelatedStocks, getStockInfo
 }
+
+// module.exports = db;
 

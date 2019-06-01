@@ -4,7 +4,6 @@ CREATE DATABASE suggestions;
 
 USE suggestions;
 
-
 CREATE TABLE stock_info ( 
 id INT AUTO_INCREMENT PRIMARY KEY,
 stock_name VARCHAR(255),
@@ -21,9 +20,3 @@ other_stock_id INT,
 FOREIGN KEY (stock_id) REFERENCES stock_info(id)
 FOREIGN KEY (other_stock_id) REFERENCES stock_info (id)
 )
-
-
-
-
--- mysql -u root < schema.sql
-

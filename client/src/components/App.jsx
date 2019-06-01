@@ -11,12 +11,22 @@ const AppWrap = styled.section`
   text-decoration: none;
 `;
 
+const Title = styled.div`
+  color: white;
+  font-family: "DIN Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.14px;
+  line-height: 30px;
+`;
+
 const RelatedStocksWrap = styled.section`
-width: 160.5px;
-height: 184px;
-display: flex;
-flex-direction: row
-text-decoration: none;
+  width: 160.5px;
+  height: 184px;
+  display: flex;
+  flex-direction: row
+  text-decoration: none;
+  margin-top: 25px
 `;
 
 class App extends React.Component{
@@ -31,7 +41,6 @@ class App extends React.Component{
   }
 
   componentDidMount(){ 
-    // this hsould be a single request. Add a join query to your route
     axios.get('/api/stocks'+window.location.pathname)
     .then((stock) => {
       console.log(stock.data.data1)
@@ -45,7 +54,6 @@ class App extends React.Component{
       
       relatedStockIds.forEach(function(id) {
         for(var i = 0 ; i < stock.data.data2.length; i++ ){
-          // console.log(stock.data.data2)
           if(id === stock.data.data2[i].id){
             console.log('id', id)
             console.log('idfdfd', stock.data.data2[i].id)
@@ -54,10 +62,8 @@ class App extends React.Component{
             console.log('error')
           }
         }
-        // console.log('array', relatedStockArray)
         return relatedStockArray;
       })
-      // console.log('relatedData', relatedStockArray)
       this.setState({
         relatedStocks: relatedStockIds,
         relatedStocksInfo: relatedStockArray
@@ -65,13 +71,12 @@ class App extends React.Component{
     })
   }
 
-
   render(){
     var stockArr = this.state.relatedStocksInfo;
     console.log('array',stockArr)
     return(
       <AppWrap>
-        <h1 id="heading">People Also Bought</h1>
+        <Title >People Also Bought</Title>   
        <RelatedStocksWrap >{stockArr.map(stock => <Stock value={stock} handleClick = {this.handleClick} key={stock.id}/>)}</RelatedStocksWrap>
       </AppWrap>
     )

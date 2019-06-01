@@ -28,3 +28,12 @@ describe('App component', () => {
 })
 
 
+// function getRelatedIds(primaryId) {
+//   // return an array of all secondary Ids related to the primary Id.
+// }
+
+// function getStockPrice(primaryId) {
+//   //price
+
+
+// }

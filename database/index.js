@@ -28,8 +28,6 @@ const getStockInfo = (callback) => {
   })
 }
 
-
-
 module.exports = {
   getRelatedStocks, getStockInfo
 }

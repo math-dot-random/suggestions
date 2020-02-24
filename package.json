@@ -52,7 +52,7 @@
     "react-dom": "^16.8.6",
     "react-simple-tooltip": "^2.6.0",
     "react-tippy": "^1.2.3",
-    "sequelize": "^5.8.7",
+    "sequelize": "^5.15.1",
     "styled-components": "^4.2.0",
     "supertest": "^4.0.2"
   }
